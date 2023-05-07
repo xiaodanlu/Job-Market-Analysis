@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Job Market Analysis</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              Job Market Analysis
+            </span>
+          </a>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="s-1"> </span>
+            <span class="s-2"> </span>
+            <span class="s-3"> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item ">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="methods.html"> Methods</a>
+                </li>
+              
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <center>
+    <h2 style="margin-top: 30px"> <font face="Arial Rounded MT Bold">Combine_data.csv: Dataset Overview</font></h2>
+    <p style="font-weight:bold"> The plot 1 to 5 were made by using the <a href="./dataset/USA_dataset.csv">USA dataset</a>.</p>
+    <p style="font-weight:bold"> The plot 6 and plot 7 were made by using the <a href="./dataset/combined_dataset.csv">combined dataset</a>, which is combined by <a href="./dataset/USA_dataset.csv"> USA dataset</a> and <a href="./dataset/combined_dataset_title.csv">DC dataset</a></p>
+  
+    <iframe src="../img/Data_Table.html"  width="70%" height="700"></iframe></center>
+    
+    <center>
+      <table>
+        <h2 style="margin-top: 30px"> <font face="Arial Rounded MT Bold">
+          Data Visualization Methodologies</font></h2>
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Code</th>
+          </tr>
+        </thead>
+        <tbody >
+          <tr>
+            <td data-label="Name">Figure 1: Symbol Map</td>
+            <td data-label="Description">
+              The map was created by using Tableau, a data visualization software. To create the map, the latitude and longitude coordinates for each job posting were obtained using geocoding, which is the process of converting addresses into geographic coordinates. The data was then imported into Tableau, where a symbol map was created using the latitude and longitude coordinates. The size of the dots on the map represented the number of job openings in a given location, while the colors were used to represent different regions of the US.
+            </td>
+            <td data-label="Code"><a href="../code/choropleth_final.html">Link</a>
+          </tr>
+          <tr>
+            <td data-label="Name">Figure 2: Treemap</td>
+            <td data-label="Description">
+              The treemap visualization was created using Tableau. The visualization displays rectangles of different sizes, with each rectangle representing a company and the size of the rectangle indicating the number of job postings available at that company. The larger the rectangle, the more job openings are available at the corresponding company. 
+            </td>
+            <td data-label="Code"><a href="../code/Happiness_Boxplot.html">Link</a>
+              </tr>
+          <tr>
+            <td data-label="Name">Figure 4: Packaged Bubble Plot</td>
+            <td data-label="Description">
+              <p>The packaged bubble plot visualization was created using Tableau. The size of each bubble represents the number of job postings available on each site.
+              </p>
+            </td>
+            <td data-label="Code"><a href="../code/bar_line.html">Link</a>
+              </tr>
+              <tr>
+                <td data-label="Name">Figure 5: Box Plot</td>
+                <td data-label="Description">The box plot was made by Plotly. The graph displays the minimum and maximum salary ranges, the median, and the interquartile range (IQR) for each job type. To create the plot, we first filtered the dataset to include only job postings with salary information available and take the average of each job posting. Then we categorized the job postings into different types such as data analyst, machine learning, neural networks, deep learning, reinforcement learning, and natural language processing to analyze the difference in salary between job types. 
+                <td data-label="Code"><a href="../code/Heatmap.html">Link</a>
+                  </tr>
+              <tr>
+                <td data-label="Name">Plot 6: Word cloud </td>
+                <td data-label="Description">
+                  <p>
+                    Word cloud visualization is a technique to analyze and present text data. The font size of each word corresponds to its frequency in the text document. 
+                  </p> 
+                </td>
+                <td data-label="Code"><a href="../code/LineChart_Affect.html">Link</a>
+              </tr> 
+              <tr>
+            <td data-label="Name">Plot 7: Box Plot</td>
+            <td data-label="Description">
+              The box plot is made by using Plotly. The x-axis is the job types included in the visualization are data analyst, natural language processing, blockchain, big data, and neural network. The y-axis is the salaries, that are grouped into two categories: the District of Columbia and surrounding areas, and the rest of the United States. The box plot shows the median, the interquartile range (IQR), and the range of the salaries for each job type and region. 
+             
+            </td>
+            <td data-label="Code"><a href="../code/scatter.html">Link</a>
+          </tr>
+          <tr>
+                <td data-label="Name">Plot 8: Map with Icon</td>
+                <td data-label="Description">The map visualization is made by using folium and the data for the map was sourced from both the USA and DC databases. The icons on the map are color-coded to represent different job types. When clicked, each icon displays information such as the company name, job title, and website from which the job information was sourced. 
+
+                </td>
+                <td data-label="Code"><a href="../code/bubble_plot.html">Link</a>
+          </tr>
+          
+        </tbody>
+      </table>
+    </center>
+    <!-- Appendix & Reference -->
+<center>
+  <table>
+    <h2 style="margin-top: 30px"> <font face="Arial Rounded MT Bold">
+      Appendix</font></h2>
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">link</th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr>
+        <td data-label="Name">Appendix A: Data Source</td>
+        <td data-label="link"><p><a href="https://drive.google.com/drive/folders/1UYeTLu9fV2mRYOvKrNvnrH18Csu0AMkg?usp=sharing">Dataset</a></p>
+          
+    </tbody>
+  </table>
+</center>
+
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>DSAN Project
+    </p>
+    <p>NetID: xl642
+    </p>
+    <p>Theme by <b
+      ><a href="https://www.free-css.com/free-css-templates/page290/brighton">Free CSS and </a><b
+      ><a href="https://codepen.io/your-work">CodePen</a>
+    </p>
+</section>
+<!-- footer section -->
+
+</div>
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+
+</body>
+
+</html>

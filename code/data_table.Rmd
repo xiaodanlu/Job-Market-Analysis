@@ -1,0 +1,22 @@
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+## Import Package
+library(DT)
+library(dplyr)
+## Import Data
+df <- read.csv("../dataset/combined_dataset.csv")
+## Edit Data
+df = subset(df, select = -c(job_id))
+### Remove Scientific Format
+options(scipen = 999)
+### Render Table
+datatable(df, class = 'hover stripe', filter = 'top', extension = 'Buttons',
+          caption = htmltools::tags$caption(style = 'caption-side: Top; text-align: left;',
+          'Table 1: ', htmltools::em('Job Description Dataset.')),
+          options = list(dom = '<"top"Bf>rt<"bottom"lip><"clear">', autoWidth = TRUE, scrollX = TRUE,
+                         lengthMenu = list(c(5,10,20), c(5,10,20)),
+                         buttons = list('copy', 'print', 
+                                   list(extend = 'collection', buttons = c('csv', 'excel', 'pdf'), 
+                                        text = 'Download'))
+          ) 
+ )
+```
