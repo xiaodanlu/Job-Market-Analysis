@@ -67,12 +67,84 @@
   </div>
 
   <center>
-    <h2 style="margin-top: 30px"> <font face="Arial Rounded MT Bold">Combine_data.csv: Dataset Overview</font></h2>
-    <p style="font-weight:bold; width: 80%""> The plot 1 to 5 were made by only using the <a href="./dataset//USA/">USA dataset</a>. This section only analyzes job openings across the United States. Therefore, adding data specifically from DC dataset would result in biased data rather than random data.</p>
-    <p style="font-weight:bold; width: 80%"> The plot 6 and plot 7 were made by both <a href="./dataset/USA/">USA dataset</a> and <a href="./dataset/DC/">DC dataset</a>. This section utilizes two datasets as the focus is on job openings in DC. Therefore, the two datasets were reorganized and categorized into DC and the rest of the US. The aim is also to present the audience with all the available job positions in the US up until April 14, 2023.</p>
-  
-    <iframe src="../img/Data_Table.html"  width="70%" height="700"></iframe></center>
+    <h2 style="margin-top: 30px"> <font face="Arial Rounded MT Bold">Dataset Overview</font></h2>
+    <p style="width: 70%""> The plot 1 to 5 were made by only using the <a href="./dataset//USA/">USA dataset</a>. This section only analyzes job openings across the United States. Therefore, adding data specifically from DC dataset would result in biased data rather than random data.</p>
+    <p style="width: 70%"> The plot 6 and plot 7 were made by both <a href="./dataset/USA/">USA dataset</a> and <a href="./dataset/DC/">DC dataset</a>. This section utilizes two datasets as the focus is on job openings in DC. Therefore, the two datasets were reorganized and categorized into DC and the rest of the US. The aim is also to present the audience with all the available job positions in the US up until April 14, 2023.</p>
+    <p style="width: 70%">Furthermore, since each graph uses a distinct data-cleaning approach, there are several datasets available, and I have selected <a href="./dataset/combined_dataset_title.csv">one</a> to showcase.</p>
+
+    <iframe src="./code/data_table.html"  width="70%" height="700"></iframe></center>
     
+    <center>
+      <table >
+        <h2 style="margin-top: 30px"> <font face="Arial Rounded MT Bold">
+          Variables Overview</font></h2>
+        <thead>
+          <tr>
+            <th scope="col">Variable Name</th>
+            <th scope="col">Type</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Variable Name">type</td>
+            <td data-label="Type"> string</td>
+            <td data-label="Description">Various job types related to data science, like machine learning, reinforcement learning, deep learning, data science, data analyst, natural language processing, blockchain, big data, neural networks, and time series analysis.
+          </tr>      
+          <tr>
+            <td data-label="Variable Name">title</td>
+            <td data-label="Type"> string</td>
+            <td data-label="Description">Job title
+          </tr>
+          <tr>
+            <td data-label="Variable Name">company_name</td>
+            <td data-label="Type"> string</td>
+    
+            <td data-label="Description">Company name
+          </tr>
+          <tr>
+            <td data-label="Variable Name">location</td>
+            <td data-label="Type"> string</td>
+    
+            <td data-label="Description">Job location
+          </tr>
+    
+          <tr>
+            <td data-label="Variable Name">via</td>
+            <td data-label="Type"> string</td>
+    
+            <td data-label="Description">The website that posts job
+          </tr>
+          <tr>
+            <td data-label="Variable Name">description</td>
+            <td data-label="Type"> string</td>
+    
+            <td data-label="Description"> Job description
+          </tr>
+          <tr>
+            <td data-label="Variable Name">location_coords</td>
+            <td data-label="Type"> string</td>
+    
+            <td data-label="Description">Job location coords
+
+            </tr>
+          <tr>
+            <td data-label="Variable Name">latitude</td>
+            <td data-label="Type"> float</td>
+    
+            <td data-label="Description">Job location coords (latitude)
+          </tr>
+          <tr>
+            <td data-label="Variable Name">longitude</td>
+            <td data-label="Type"> float</td>
+    
+            <td data-label="Description">Job location coords(longitude)
+
+            </tr>
+        </tbody>
+      </table>
+    </center>
+
     <center>
       <table>
         <h2 style="margin-top: 30px"> <font face="Arial Rounded MT Bold">
@@ -91,7 +163,7 @@
             <td data-label="Description">
               The map was created by using Tableau, a data visualization software. To create the map, the latitude and longitude coordinates for each job posting were obtained using geocoding, which is the process of converting addresses into geographic coordinates. The data was then imported into Tableau, where a symbol map was created using the latitude and longitude coordinates. The size of the dots on the map represented the number of job openings in a given location, while the colors were used to represent different regions of the US.
             </td>
-            <td data-label="Code"><a href="./code/tableau_prepare.ipynb">Clean</a>; <a href="https://public.tableau.com/views/JobsinUSA_16833546669270/Sheet1?:language=en-US&:display_count=n&:origin=viz_share_link">Tableau</a>
+            <td data-label="Code"><a href="./code/load_data.html">Clean 1</a>;<a href="./code/tableau_prepare.html">Clean 2</a>; <a href="https://public.tableau.com/views/JobsinUSA_16833546669270/Sheet1?:language=en-US&:display_count=n&:origin=viz_share_link">Tableau</a>
               <td data-label="Dataset"><a href="./dataset/us_freq.csv">Link</a>
 
           </tr>
@@ -100,7 +172,7 @@
             <td data-label="Description">
               The treemap visualization was created using Tableau. The visualization displays rectangles of different sizes, with each rectangle representing a company and the size of the rectangle indicating the number of job postings available at that company. The larger the rectangle, the more job openings are available at the corresponding company. 
             </td>
-            <td data-label="Code"><a href="./code/tableau_prepare.ipynb">Clean</a>; <a href="https://public.tableau.com/views/company_16833572449240/Sheet1?:language=en-US&:display_count=n&:origin=viz_share_link">Tableau</a>
+            <td data-label="Code"><a href="./code/load_data.html">Clean 1</a>;<a href="./code/tableau_prepare.html">Clean 2</a>; <a href="https://public.tableau.com/views/company_16833572449240/Sheet1?:language=en-US&:display_count=n&:origin=viz_share_link">Tableau</a>
               <td data-label="Dataset"><a href="./dataset/us_freq_all.csv">Link</a>
 
               </tr>
@@ -110,14 +182,14 @@
               <p>The packaged bubble plot visualization was created using Tableau. The size of each bubble represents the number of job postings available on each site.
               </p>
             </td>
-            <td data-label="Code"><a href="./code/tableau_prepare.ipynb">Clean</a>; <a href="https://public.tableau.com/views/postingloc/Sheet1?:language=en-US&:display_count=n&:origin=viz_share_link">Tableau</a>
+            <td data-label="Code"><a href="./code/load_data.html">Clean 1</a>;<a href="./code/tableau_prepare.html">Clean 2</a>; <a href="https://public.tableau.com/views/postingloc/Sheet1?:language=en-US&:display_count=n&:origin=viz_share_link">Tableau</a>
               <td data-label="Dataset"><a href="./dataset/us_freq_all.csv">Link</a>
 
               </tr>
               <tr>
                 <td data-label="Name">Figure 5: Box Plot</td>
-                <td data-label="Description">The box plot was made by Plotly. The graph displays the minimum and maximum salary ranges, the median, and the interquartile range (IQR) for each job type. To create the plot, we first filtered the dataset to include only job postings with salary information available and take the average of each job posting. Then we categorized the job postings into different types such as data analyst, machine learning, neural networks, deep learning, reinforcement learning, and natural language processing to analyze the difference in salary between job types. 
-                <td data-label="Code"><a href="./code/salary_plot_all_wordcloud.ipynb">Clean & Plot</a>
+                <td data-label="Description">The box plot was made by Plotly. The graph displays the minimum and maximum salary ranges, the median, and the interquartile range (IQR) for each job type. To create the plot, we first filtered the dataset to include only job postings with salary information available and take the average of each job posting. Then we categorized the job postings into different types such as data analyst, machine learning, neural networks, deep learning, reinforcement learning, and natural language processing (there is no salary information on time series analysis job type) to analyze the difference in salary between job types. 
+                <td data-label="Code"><a href="./code/salary_plot_all_wordcloud.html">Clean & Plot</a>
                   <td data-label="Dataset"><a href="./dataset/USA/">Link</a>
 
                   </tr>
@@ -128,17 +200,17 @@
                     Word cloud visualization is a technique to analyze and present text data. The font size of each word corresponds to its frequency in the text document. 
                   </p> 
                 </td>
-                <td data-label="Code"><a href="./code/salary_plot_all_wordcloud.ipynb"> Clean & Plot</a>
+                <td data-label="Code"><a href="./code/salary_plot_all_wordcloud.html"> Clean & Plot</a>
                   <td data-label="Dataset"><a href="./dataset/USA/">Link</a>
 
               </tr> 
               <tr>
             <td data-label="Name">Plot 7: Box Plot</td>
             <td data-label="Description">
-              The box plot is made by using Plotly. The x-axis is the job types included in the visualization are data analyst, natural language processing, blockchain, big data, and neural network. The y-axis is the salaries, that are grouped into two categories: the District of Columbia and surrounding areas, and the rest of the United States. The box plot shows the median, the interquartile range (IQR), and the range of the salaries for each job type and region. 
+              The box plot is made by using Plotly. The x-axis is the job types included in the visualization are data analyst, natural language processing, blockchain, big data, and neural network (there is no salary information on time series analysis job type). The y-axis is the average salaries, that are grouped into two categories: the District of Columbia and surrounding areas, and the rest of the United States. The box plot shows the median, the interquartile range (IQR), and the range of the salaries for each job type and region. 
              
             </td>
-            <td data-label="Code"><a href="./code/salary_not_in_dc.ipynb">Clean 1</a>; <a href="./code/salary_dc.ipynb">Clean 2</a>; <a href="./code/salary_plot_dc_vs_not.ipynb">Plot</a>
+            <td data-label="Code"><a href="./code/salary_not_in_dc.html">Clean 1</a>; <a href="./code/salary_dc.html">Clean 2</a>; <a href="./code/salary_plot_dc_vs_not.html">Plot</a>
               <td data-label="Dataset"><a href="./dataset/salary_not_in_dc.csv">Link 1</a>; <a href="./dataset/salary_in_dc.csv">Link 2</a>
 
           </tr>
@@ -147,7 +219,7 @@
                 <td data-label="Description">The map visualization is made by using folium and the data for the map was sourced from both the USA and DC databases. The icons on the map are color-coded to represent different job types. When clicked, each icon displays information such as the company name, job title, and website from which the job information was sourced. 
 
                 </td>
-                <td data-label="Code"><a href="./code/map_final.ipynb">Clean & Plot</a>
+                <td data-label="Code"><a href="./code/map_final.html">Clean & Plot</a>
                   <td data-label="Dataset"><a href="./dataset/combined_dataset_title.csv">Link</a>
 
           </tr>
